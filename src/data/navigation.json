@@ -1,0 +1,19 @@
+{
+  "navItems": [
+    {
+      "name": "Collections"
+    },
+    {
+      "name": "Men"
+    },
+    {
+      "name": "Women"
+    },
+    {
+      "name": "About"
+    },
+    {
+      "name": "Contact"
+    }
+  ]
+}
