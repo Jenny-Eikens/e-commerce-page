@@ -63,8 +63,8 @@ export default function NavBar({
 
   return (
     <>
-      <header className="relative flex h-[15vh] w-full px-2 py-3 md:border-b-2 md:border-black md:border-opacity-10 md:py-8">
-        <div className="header-wrapper flex w-full justify-between md:mb-1">
+      <header className="relative flex h-[15vh] w-full px-2 py-3 md:border-b-2 md:border-black md:border-opacity-10 md:py-0">
+        <div className="header-wrapper flex h-full w-full items-center justify-between">
           {/* Menu toggling button
         Why aren't button and logo vertically aligned??? */}
           <span className="flex items-center justify-start">
@@ -94,9 +94,9 @@ export default function NavBar({
 
           {/* Nav bar */}
           <nav
-            className={`fixed left-0 top-0 z-40 flex h-full w-[65vw] max-w-[300px] flex-col bg-white transition-transform duration-300 ${menuOpen ? "translate-x-0" : "-translate-x-full"} border-2 border-green-500 md:relative md:left-auto md:top-auto md:ml-8 md:mt-[-2rem] md:flex md:h-[15vh] md:w-full md:max-w-[500px] md:translate-x-0 md:flex-row md:items-center md:border-b-2 md:border-black md:border-opacity-10`}
+            className={`fixed left-0 top-0 z-40 flex h-full w-[65vw] max-w-[300px] flex-col bg-white transition-transform duration-300 ${menuOpen ? "translate-x-0" : "-translate-x-full"} md:relative md:left-auto md:top-auto md:ml-8 md:w-full md:max-w-[500px] md:translate-x-0 md:flex-row`}
           >
-            <ul className="mt-[5rem] list-none pl-4 md:mt-0 md:flex md:h-full md:w-full md:flex-row md:items-center md:justify-start md:pl-0">
+            <ul className="mt-[5rem] list-none pl-4 md:mt-0 md:flex md:flex-row md:items-center md:justify-start md:pl-0">
               {navItems.navItems.map((item) => (
                 <li>
                   <a href="#">{item.name}</a>
@@ -110,7 +110,7 @@ export default function NavBar({
             <div className="group relative flex items-center">
               <button>{cart}</button>
               <span className="absolute right-[-10px] top-[-8px] rounded-full bg-orange px-2 text-xs font-bold text-white">
-                {itemCount}
+                {itemCount !== 0 && itemCount}
               </span>
             </div>
             <a href="#">

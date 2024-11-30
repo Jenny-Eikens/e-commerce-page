@@ -17,3 +17,9 @@ body {
 nav ul li {
   @apply my-3 font-[700] md:my-0 md:mr-6 md:flex md:h-full md:items-center md:text-sm md:font-[400] md:text-dark-gray-blue md:transition-all md:duration-200 md:hover:border-b-4 md:hover:border-orange md:hover:text-black md:focus:border-b-4 md:focus:border-orange;
 }
+
+.images-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "main-image", "thumbnail";
+}
