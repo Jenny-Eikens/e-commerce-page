@@ -77,7 +77,6 @@ export default function NavBar({
             </button>
             {/* Logo */}
             <span className="ml-3 mt-[-3px] md:ml-0 md:items-start">
-              {" "}
               {/* mt is not a good solution */}
               <a href="#" aria-label="link to homepage">
                 {logo}
