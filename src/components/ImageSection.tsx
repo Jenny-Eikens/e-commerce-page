@@ -29,20 +29,17 @@ export default function ImageSection({
     <div className="images-grid relative m-0 w-full border border-green-500 md:m-auto md:max-w-[400px]">
       <img
         src={clickedImg}
-        className="main-image w-[100vw] object-cover hover:cursor-pointer md:w-full md:scale-100 md:rounded-xl md:object-contain"
+        className="main-image max-h-[45vh] w-[100vw] object-cover hover:cursor-pointer md:max-h-full md:w-full md:scale-100 md:rounded-xl md:object-contain"
         alt="image of shoe"
         onClick={() => setGalleryOpen(true)}
       />
       <button
-        className="rotation group top-[50%] ml-1 md:left-[-1.5rem] md:top-[35%] md:ml-0 md:hidden"
+        className="rotation left group md:hidden"
         onClick={handlePrevious}
       >
         {iconPrevious}
       </button>
-      <button
-        className="rotation group right-[-1.5rem] top-[50%] mr-[1.75rem] md:top-[35%] md:mr-0 md:hidden"
-        onClick={handleNext}
-      >
+      <button className="rotation right group md:hidden" onClick={handleNext}>
         {iconNext}
       </button>
       <div className="thumbnail-wrapper hidden grid-cols-4 gap-5 md:grid">

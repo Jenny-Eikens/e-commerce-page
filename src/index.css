@@ -27,5 +27,13 @@ nav ul li {
 }
 
 .rotation {
-  @apply absolute flex h-9 w-9 items-center justify-center rounded-full bg-white hover:cursor-pointer;
+  @apply absolute top-[50%] flex h-9 w-9 translate-y-[-50%] items-center justify-center rounded-full bg-white hover:cursor-pointer md:top-[40%];
+}
+
+.left {
+  @apply left-[10px] md:left-[-20px];
+}
+
+.right {
+  @apply right-[10px] md:right-[-20px];
 }

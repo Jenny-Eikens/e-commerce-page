@@ -91,14 +91,30 @@ export default function ImageGallery() {
         className={`images-overlay fixed inset-0 z-[100] m-auto hidden min-h-[100vh] items-center justify-center bg-black bg-opacity-75 md:flex ${galleryOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
         aria-hidden="true"
       >
-        <div className="m-auto flex scale-110 items-center justify-center">
+        <div className="relative m-auto flex h-full w-full scale-110 items-center justify-center border-4 border-red-400">
           <div className="images-grid relative m-auto max-w-[400px]">
+            {/* Close button */}
+            <button
+              className="group absolute right-0 top-[-2rem] bg-transparent"
+              onClick={() => setGalleryOpen(false)}
+            >
+              {iconClose}
+            </button>
+
+            <button className="rotation left group" onClick={handlePrevious}>
+              {iconPrevious}
+            </button>
+
+            {/* Image section */}
             <img
               src={clickedImg}
               className="main-image w-full rounded-xl object-contain hover:cursor-pointer"
               alt="image of shoe"
               onClick={() => setGalleryOpen(true)}
             />
+            <button className="rotation right group" onClick={handleNext}>
+              {iconNext}
+            </button>
             <div className="thumbnail-wrapper mx-8 hidden grid-cols-4 gap-5 md:grid">
               {images.thumbnails.map((thumbnail, index) => {
                 return (
@@ -123,26 +139,6 @@ export default function ImageGallery() {
               })}
             </div>
           </div>
-
-          {/* Buttons */}
-          <button
-            className="group absolute right-0 top-[-2rem] bg-transparent"
-            onClick={() => setGalleryOpen(false)}
-          >
-            {iconClose}
-          </button>
-          <button
-            className="rotation group left-[-1.5rem] top-[35%]"
-            onClick={handlePrevious}
-          >
-            {iconPrevious}
-          </button>
-          <button
-            className="rotation group right-[-1.5rem] top-[35%]"
-            onClick={handleNext}
-          >
-            {iconNext}
-          </button>
         </div>
       </div>
       {/* End of overlay */}
