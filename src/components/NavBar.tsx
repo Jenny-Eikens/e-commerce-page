@@ -63,7 +63,7 @@ export default function NavBar({
 
   return (
     <>
-      <header className="relative flex h-[15vh] w-full px-2 py-3 md:border-b-2 md:border-black md:border-opacity-10 md:py-0">
+      <header className="relative flex h-[4rem] w-full px-2 md:h-[6rem] md:border-b-2 md:border-black md:border-opacity-10 md:py-0">
         <div className="header-wrapper flex h-full w-full items-center justify-between">
           {/* Menu toggling button
         Why aren't button and logo vertically aligned??? */}
