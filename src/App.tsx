@@ -16,7 +16,7 @@ function App() {
           itemCount={itemCount}
           setItemCount={setItemCount}
         />
-        <div className="main-content-wrapper grid w-full max-w-[1000px] grid-cols-1 gap-6 border-2 border-blue-700 md:m-auto md:min-h-[70vh] md:grid-cols-2">
+        <div className="main-content-wrapper grid w-full max-w-[1000px] grid-cols-1 gap-6 border-2 border-blue-700 md:m-auto md:min-h-[70vh] md:grid-cols-2 md:px-2">
           <ImageGallery />
           <div className="border-2 border-green-500">Shopping section</div>
         </div>

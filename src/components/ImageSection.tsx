@@ -1,6 +1,6 @@
 import { useState } from "react";
 import images from "../data/images.json";
-import { iconClose, iconPrevious, iconNext } from "./ImageGallery";
+import { iconPrevious, iconNext } from "./ImageGallery";
 
 interface ImageSectionProps {
   clickedImg: string;
@@ -26,27 +26,25 @@ export default function ImageSection({
   handleNext,
 }: ImageSectionProps) {
   return (
-    <div className="images-grid relative m-0 w-full md:m-auto md:max-w-[400px]">
+    <div className="images-grid relative m-0 w-full border border-green-500 md:m-auto md:max-w-[400px]">
       <img
         src={clickedImg}
-        className="main-image md:max-h-auto max-h-[40vh] w-[100vw] object-cover hover:cursor-pointer md:scale-100 md:rounded-xl md:object-contain"
+        className="main-image w-[100vw] object-cover hover:cursor-pointer md:w-full md:scale-100 md:rounded-xl md:object-contain"
         alt="image of shoe"
         onClick={() => setGalleryOpen(true)}
       />
-      <div className="border border-green-500">
-        <button
-          className="rotation group top-[50%] md:left-[-1.5rem] md:top-[35%] md:hidden"
-          onClick={handlePrevious}
-        >
-          {iconPrevious}
-        </button>
-        <button
-          className="rotation group right-[-1.5rem] top-[35%] md:hidden"
-          onClick={handleNext}
-        >
-          {iconNext}
-        </button>
-      </div>
+      <button
+        className="rotation group top-[50%] ml-1 md:left-[-1.5rem] md:top-[35%] md:ml-0 md:hidden"
+        onClick={handlePrevious}
+      >
+        {iconPrevious}
+      </button>
+      <button
+        className="rotation group right-[-1.5rem] top-[50%] mr-[1.75rem] md:top-[35%] md:mr-0 md:hidden"
+        onClick={handleNext}
+      >
+        {iconNext}
+      </button>
       <div className="thumbnail-wrapper hidden grid-cols-4 gap-5 md:grid">
         {images.thumbnails.map((thumbnail, index) => {
           return (
