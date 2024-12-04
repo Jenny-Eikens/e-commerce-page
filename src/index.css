@@ -21,7 +21,7 @@ nav ul li {
 .images-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-areas: "main-image", "thumbnail";
+  grid-template-areas: "main-image", "thumbnails";
   justify-content: center;
   align-items: center;
 }
