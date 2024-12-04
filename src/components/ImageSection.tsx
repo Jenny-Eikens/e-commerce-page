@@ -27,21 +27,23 @@ export default function ImageSection({
 }: ImageSectionProps) {
   return (
     <div className="images-grid relative m-0 w-full border border-green-500 md:m-auto md:max-w-[400px]">
-      <img
-        src={clickedImg}
-        className="main-image max-h-[45vh] w-[100vw] object-cover hover:cursor-pointer md:max-h-full md:w-full md:scale-100 md:rounded-xl md:object-contain"
-        alt="image of shoe"
-        onClick={() => setGalleryOpen(true)}
-      />
       <button
         className="rotation left group md:hidden"
         onClick={handlePrevious}
       >
         {iconPrevious}
       </button>
+      <img
+        src={clickedImg}
+        className="main-image max-h-[45vh] w-[100vw] object-cover hover:cursor-pointer md:max-h-full md:w-full md:scale-100 md:rounded-xl md:object-contain"
+        alt="image of shoe"
+        onClick={() => setGalleryOpen(true)}
+      />
       <button className="rotation right group md:hidden" onClick={handleNext}>
         {iconNext}
       </button>
+
+      {/* Thumbnails, hidden on mobile screens */}
       <div className="thumbnail-wrapper hidden grid-cols-4 gap-5 md:grid">
         {images.thumbnails.map((thumbnail, index) => {
           return (

@@ -105,7 +105,7 @@ export default function ImageGallery() {
               {iconPrevious}
             </button>
 
-            {/* Image section */}
+            {/* Images */}
             <img
               src={clickedImg}
               className="main-image w-full rounded-xl object-contain hover:cursor-pointer"
