@@ -1,4 +1,5 @@
 import images from "../data/images.json";
+import { useEffect, useRef } from "react";
 
 const iconClose = (
   <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
@@ -34,10 +35,26 @@ export default function ImageOverlay({
   handlePrevious,
   handleNext,
 }: ImageOverlayProps) {
+  const overlayRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (galleryOpen && overlayRef.current) {
+      overlayRef.current.focus();
+    }
+  }, [galleryOpen]);
+
+  function handleKeyDown(e: any) {
+    if (e.key === "Escape") {
+      setGalleryOpen(false);
+    }
+  }
+
   return (
     <div
       className={`images-overlay fixed inset-0 z-[100] m-auto hidden min-h-[100vh] items-center justify-center bg-black bg-opacity-75 md:flex ${galleryOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
-      aria-hidden="true"
+      tabIndex={-1}
+      onKeyDown={handleKeyDown}
+      ref={overlayRef}
     >
       {/* Wrapper for centering everything within overlay */}
       <div className="grid-wrapper relative m-auto flex h-full w-full items-center justify-center border-4 border-yellow-400">
@@ -46,11 +63,16 @@ export default function ImageOverlay({
           <button
             className="group absolute right-0 top-[-2rem] bg-transparent"
             onClick={() => setGalleryOpen(false)}
+            aria-label="Close overlay"
           >
             {iconClose}
           </button>
           {/* Previous button */}
-          <button className="rotation left group" onClick={handlePrevious}>
+          <button
+            className="rotation left group"
+            onClick={handlePrevious}
+            aria-label="Previous"
+          >
             {iconPrevious}
           </button>
 
@@ -61,7 +83,11 @@ export default function ImageOverlay({
             alt="image of shoe"
           />
           {/* Next button */}
-          <button className="rotation right group" onClick={handleNext}>
+          <button
+            className="rotation right group"
+            onClick={handleNext}
+            aria-label="Next"
+          >
             {iconNext}
           </button>
 
@@ -72,6 +98,14 @@ export default function ImageOverlay({
                 <>
                   <div
                     key={index}
+                    tabIndex={0}
+                    role="button"
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        handleClick(index);
+                      }
+                    }}
                     className={`group relative rounded-lg transition-all duration-100 hover:cursor-pointer ${currentIndex === index ? "border-2 border-orange" : "border-none"}`}
                   >
                     <div

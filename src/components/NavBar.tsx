@@ -78,7 +78,7 @@ export default function NavBar({
             {/* Logo */}
             <span className="ml-3 mt-[-3px] md:ml-0 md:items-start">
               {/* mt is not a good solution */}
-              <a href="#" aria-label="link to homepage">
+              <a href="#" aria-label="Link to homepage">
                 {logo}
               </a>
             </span>
@@ -105,9 +105,9 @@ export default function NavBar({
           </nav>
 
           {/* Shopping cart and avatar */}
-          <span className="flex w-[45%] items-center justify-end pr-8">
+          <span className="flex w-[45%] items-center justify-end">
             <div className="group relative flex items-center">
-              <button>{cart}</button>
+              <button aria-label="Toggle cart">{cart}</button>
               <span className="absolute right-[-10px] top-[-8px] rounded-full bg-orange px-2 text-xs font-bold text-white">
                 {itemCount !== 0 && itemCount}
               </span>

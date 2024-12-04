@@ -37,3 +37,7 @@ nav ul li {
 .right {
   @apply right-[10px] md:right-[-20px];
 }
+
+.attribution a {
+  @apply text-orange underline;
+}

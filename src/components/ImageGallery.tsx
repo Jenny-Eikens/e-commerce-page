@@ -90,23 +90,40 @@ export default function ImageGallery() {
       {/* End of overlay */}
 
       {/* Main content */}
-      <div className="images-grid relative border border-green-500 md:m-auto md:max-w-[400px]">
+      <section
+        className="images-grid relative border border-green-500 md:m-auto md:max-w-[400px]"
+        aria-hidden={galleryOpen ? "true" : "false"}
+      >
         {/* Previous button */}
         <button
           className="rotation left group md:hidden"
           onClick={handlePrevious}
+          aria-label="Previous"
         >
           {iconPrevious}
         </button>
         {/* Main image */}
+
         <img
           src={clickedImg}
           className="main-image max-h-[45vh] w-[100vw] object-cover hover:cursor-pointer md:max-h-full md:w-auto md:rounded-xl md:object-contain"
           alt="image of shoe"
           onClick={() => setGalleryOpen(true)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              setGalleryOpen(true);
+            }
+          }}
+          tabIndex={0}
+          role="button"
         />
         {/* Next button */}
-        <button className="rotation right group md:hidden" onClick={handleNext}>
+        <button
+          className="rotation right group md:hidden"
+          onClick={handleNext}
+          aria-label="Next"
+        >
           {iconNext}
         </button>
 
@@ -117,6 +134,14 @@ export default function ImageGallery() {
               <>
                 <div
                   key={index}
+                  tabIndex={0}
+                  role="button"
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      handleClick(index);
+                    }
+                  }}
                   className={`group relative rounded-lg transition-all duration-100 hover:cursor-pointer ${currentIndex === index ? "border-2 border-orange" : "border-none"}`}
                 >
                   <div
@@ -134,7 +159,7 @@ export default function ImageGallery() {
             );
           })}
         </div>
-      </div>
+      </section>
     </>
   );
 }
