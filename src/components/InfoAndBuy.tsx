@@ -8,6 +8,7 @@ const iconMinus = (
     height="4"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
+    className="transition-opacity duration-150 hover:opacity-70"
   >
     <defs>
       <path
@@ -25,6 +26,7 @@ const iconPlus = (
     height="12"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
+    className="transition-opacity duration-150 hover:opacity-70"
   >
     <defs>
       <path
@@ -73,35 +75,33 @@ export default function InfoAndBuy({
 
   return (
     <section className="border-2 border-green-500">
-      <div className="info-and-buy flex h-full flex-col items-start justify-center space-y-4 px-3 md:mx-4 md:space-y-6">
+      <div className="info-and-buy flex h-full flex-col items-start justify-center space-y-4 px-3 md:mx-4">
         {/* Company name */}
         <h2 className="text-xs font-bold uppercase tracking-wider text-dark-gray-blue">
           Sneaker Company
         </h2>
 
         {/* Article */}
-        <h1 className="text-4xl font-bold text-v-dark-blue">
-          {article.article[0].title}
-        </h1>
-        <p className="text-sm leading-5 tracking-wide text-dark-gray-blue md:mr-2 md:pt-4">
-          {article.article[0].text}
+        <h1 className="text-4xl font-bold text-v-dark-blue">{article.title}</h1>
+        <p className="text-sm leading-5 tracking-wide text-dark-gray-blue md:mr-2 md:pt-4 md:leading-6">
+          {article.text}
         </p>
 
         {/* Pricing */}
         <div className="flex w-full flex-nowrap items-end pt-2 md:flex-wrap">
           <span className="text-2xl font-bold text-v-dark-blue">
-            ${prices.data[0].currentPrice}
+            ${prices.currentPrice.toFixed(2)}
           </span>
-          <span className="ml-2 flex items-center rounded-md bg-v-dark-blue px-3 py-1 text-sm font-bold text-white">
-            {prices.data[0].discount}
+          <span className="ml-4 flex items-center rounded-md bg-v-dark-blue px-3 py-1 text-sm font-bold text-white">
+            {prices.discount}
           </span>
           <span className="ml-auto justify-end font-bold text-dark-gray-blue line-through md:mt-2 md:w-full md:text-left">
-            ${prices.data[0].oldPrice}
+            ${prices.oldPrice.toFixed(2)}
           </span>
         </div>
 
         {/* Adding to cart */}
-        <div className="grid w-full grid-cols-1 gap-3 md:grid-cols-5">
+        <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-5">
           <div className="flex items-center justify-between rounded-lg bg-light-gray-blue p-3 md:col-span-2">
             <button aria-label="Minus one" onClick={() => handleClickMinus()}>
               {iconMinus}
@@ -112,8 +112,8 @@ export default function InfoAndBuy({
             </button>
           </div>
           <button
-            aria-label="Update item count in cart"
-            className="flex items-center justify-center space-x-2 rounded-lg bg-orange p-3 md:col-span-3"
+            aria-label="Add to cart"
+            className="flex items-center justify-center space-x-2 rounded-lg bg-orange p-3 transition-opacity duration-200 hover:bg-opacity-70 md:col-span-3"
             onClick={() => setItemCount(itemCount + count)}
           >
             <span>{iconCart}</span>

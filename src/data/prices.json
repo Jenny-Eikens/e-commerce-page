@@ -1,9 +1,5 @@
 {
-  "data": [
-    {
-      "currentPrice": "125.00",
-      "discount": "50%",
-      "oldPrice": "250.00"
-    }
-  ]
+  "currentPrice": 125.0,
+  "discount": "50%",
+  "oldPrice": 250.0
 }

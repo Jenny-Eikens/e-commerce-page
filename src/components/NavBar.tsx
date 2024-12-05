@@ -1,6 +1,8 @@
 import React from "react";
+import { useState } from "react";
 import avatar from "../data/avatar.json";
 import navItems from "../data/navigation.json";
+import ShoppingCart from "./ShoppingCart";
 
 interface NavBarProps {
   menuOpen: boolean;
@@ -61,6 +63,8 @@ export default function NavBar({
     </svg>
   );
 
+  const [cartOpen, setCartOpen] = useState(false);
+
   return (
     <>
       <header className="relative flex h-[4rem] w-full px-2 md:h-[6rem] md:border-b-2 md:border-black md:border-opacity-10 md:py-0">
@@ -104,19 +108,31 @@ export default function NavBar({
             </ul>
           </nav>
 
-          {/* Shopping cart and avatar */}
+          {/* Shopping cart */}
           <span className="flex w-[45%] items-center justify-end">
             <div className="group relative flex items-center">
-              <button aria-label="Toggle cart">{cart}</button>
+              <button
+                aria-label="Toggle cart"
+                onClick={() => setCartOpen(!cartOpen)}
+              >
+                {cart}
+              </button>
               <span className="absolute right-[-10px] top-[-8px] rounded-full bg-orange px-2 text-xs font-bold text-white">
                 {itemCount !== 0 && itemCount}
               </span>
+              {cartOpen && (
+                <ShoppingCart
+                  itemCount={itemCount}
+                  setItemCount={setItemCount}
+                />
+              )}
             </div>
+            {/* Avatar */}
             <a href="#">
               <img
                 src={avatar.link}
                 alt={avatar.description}
-                className="ml-8 max-h-[40px] rounded-full object-contain transition-colors duration-200 hover:outline hover:outline-2 hover:outline-orange md:max-h-[50px]"
+                className="ml-8 max-h-[40px] rounded-full object-contain transition-colors duration-200 hover:outline hover:outline-2 hover:outline-orange md:ml-10 md:mr-4 md:max-h-[50px]"
               />
             </a>
           </span>
