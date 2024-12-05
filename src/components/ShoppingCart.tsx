@@ -31,7 +31,7 @@ export default function ShoppingCart({
 }: shoppingCartProps) {
   return (
     <>
-      <div className="shopping-cart fixed inset-0 z-[100] m-auto mt-[4.5rem] flex h-[35vh] w-[95vw] max-w-[450px] flex-col rounded-lg border-none bg-white shadow-lg shadow-dark-gray-blue md:absolute md:left-[50%] md:top-full md:mt-6 md:h-[32vh] md:w-[25vw] md:-translate-x-[50%] md:transform md:p-5">
+      <div className="shopping-cart fixed inset-0 z-[20] m-auto mt-[4.5rem] flex h-[35vh] w-[95vw] max-w-[450px] flex-col rounded-lg border-none bg-white shadow-lg shadow-dark-gray-blue md:absolute md:left-[50%] md:top-full md:mt-6 md:h-[32vh] md:w-[25vw] md:-translate-x-[50%] md:transform md:p-5">
         <h1 className="border-b-2 border-black border-opacity-10 p-4 text-sm font-bold md:p-0 md:pb-4">
           Cart
         </h1>
