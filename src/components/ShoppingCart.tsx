@@ -58,7 +58,7 @@ export default function ShoppingCart({
                     <span>${prices.currentPrice.toFixed(2)} </span>
                     <span>x </span>
                     <span>{itemCount} </span>
-                    <span className="font-bold text-black">
+                    <span className="ml-1 font-bold text-black">
                       ${(prices.currentPrice * itemCount).toFixed(2)}
                     </span>
                   </div>
