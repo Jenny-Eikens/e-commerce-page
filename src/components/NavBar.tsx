@@ -67,7 +67,7 @@ export default function NavBar({
 
   return (
     <>
-      <header className="relative flex h-[4rem] w-full px-2 md:h-[6rem] md:border-b-2 md:border-black md:border-opacity-10 md:py-0">
+      <header className="relative flex h-[4rem] w-full px-2 md:mx-2 md:h-[6rem] md:border-b-2 md:border-black md:border-opacity-10 md:py-0">
         <div className="header-wrapper flex h-full w-full items-center justify-between">
           {/* Menu toggling button */}
           <span className="flex items-center justify-start">
@@ -79,7 +79,7 @@ export default function NavBar({
               {menuOpen ? close : hamburger}
             </button>
             {/* Logo */}
-            <span className="ml-1 pb-1 md:ml-2 md:items-start">
+            <span className="ml-1 pb-1 md:items-start">
               <a href="#" aria-label="Link to homepage">
                 {logo}
               </a>
@@ -130,7 +130,7 @@ export default function NavBar({
               <img
                 src={avatar.link}
                 alt={avatar.description}
-                className="ml-4 max-h-[40px] rounded-full object-contain transition-colors duration-200 hover:outline hover:outline-2 hover:outline-orange md:ml-7 md:mr-2 md:max-h-[50px]"
+                className="ml-4 max-h-[40px] rounded-full object-contain transition-colors duration-200 hover:outline hover:outline-2 hover:outline-orange md:ml-8 md:max-h-[50px]"
               />
             </a>
           </span>
