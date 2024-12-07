@@ -74,8 +74,8 @@ export default function InfoAndBuy({
   }
 
   return (
-    <section>
-      <div className="info-and-buy flex h-full flex-col items-start justify-center space-y-4 px-3 md:mx-4">
+    <div>
+      <div className="info-and-buy flex h-full flex-col items-start justify-center space-y-6 px-3 md:mx-4">
         {/* Company name */}
         <h2 className="text-xs font-bold uppercase tracking-wider text-dark-gray-blue">
           Sneaker Company
@@ -101,7 +101,7 @@ export default function InfoAndBuy({
         </div>
 
         {/* Adding to cart */}
-        <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-5">
+        <div className="grid w-full grid-cols-1 gap-4 pt-8 md:pt-0 lg:grid-cols-5">
           <div className="flex items-center justify-between rounded-lg bg-light-gray-blue lg:col-span-2">
             <button
               aria-label="Minus one"
@@ -129,6 +129,6 @@ export default function InfoAndBuy({
           </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

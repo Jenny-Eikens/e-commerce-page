@@ -135,7 +135,7 @@ export default function NavBar({
               <img
                 src={avatar.link}
                 alt={avatar.description}
-                className="ml-4 max-h-[40px] rounded-full object-contain transition-colors duration-200 hover:outline hover:outline-2 hover:outline-orange md:ml-8 md:max-h-[50px]"
+                className="ml-6 max-h-[40px] rounded-full object-contain transition-colors duration-200 hover:outline hover:outline-2 hover:outline-orange md:ml-8 md:max-h-[50px]"
               />
             </a>
           </span>
