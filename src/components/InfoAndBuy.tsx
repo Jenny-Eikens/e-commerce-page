@@ -101,8 +101,8 @@ export default function InfoAndBuy({
         </div>
 
         {/* Adding to cart */}
-        <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-5">
-          <div className="flex items-center justify-between rounded-lg bg-light-gray-blue md:col-span-2">
+        <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-5">
+          <div className="flex items-center justify-between rounded-lg bg-light-gray-blue lg:col-span-2">
             <button
               aria-label="Minus one"
               className="p-4"
@@ -121,7 +121,7 @@ export default function InfoAndBuy({
           </div>
           <button
             aria-label="Add to cart"
-            className="flex items-center justify-center space-x-2 rounded-lg bg-orange p-3 transition-opacity duration-200 hover:bg-opacity-70 md:col-span-3"
+            className="flex items-center justify-center space-x-2 rounded-lg bg-orange p-3 transition-opacity duration-200 hover:bg-opacity-70 lg:col-span-3"
             onClick={() => setItemCount(itemCount + count)}
           >
             <span>{iconCart}</span>

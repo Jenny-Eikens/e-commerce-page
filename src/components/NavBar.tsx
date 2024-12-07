@@ -109,14 +109,14 @@ export default function NavBar({
           {/* Shopping cart */}
           <span className="flex w-[45%] items-center justify-end">
             <div className="group relative flex items-center">
-              <button
-                aria-label="Toggle cart"
+              <span
+                className="flex items-center"
                 onClick={() => setCartOpen(!cartOpen)}
               >
-                {cart}
-              </button>
-              <span className="absolute right-[-10px] top-[-8px] rounded-full bg-orange px-2 text-xs font-bold text-white">
-                {itemCount !== 0 && itemCount}
+                <button aria-label="Toggle cart">{cart}</button>
+                <span className="absolute right-[-10px] top-[-8px] rounded-full bg-orange px-2 text-xs font-bold text-white">
+                  {itemCount !== 0 && itemCount}
+                </span>
               </span>
               {cartOpen && (
                 <ShoppingCart

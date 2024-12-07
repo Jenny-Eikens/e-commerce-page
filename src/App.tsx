@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <div className="wrapper relative m-auto flex min-h-[100vh] max-w-[1100px] flex-col justify-start">
+      <div className="wrapper relative m-auto flex min-h-[100vh] max-w-[1000px] flex-col justify-start">
         <NavBar
           menuOpen={menuOpen}
           setMenuOpen={setMenuOpen}
