@@ -55,10 +55,16 @@ export default function ImageOverlay({
       tabIndex={-1}
       onKeyDown={handleKeyDown}
       ref={overlayRef}
+      onClick={() => setGalleryOpen(false)}
     >
       {/* Wrapper for centering everything within overlay */}
       <div className="grid-wrapper relative m-auto flex h-full w-full items-center justify-center">
-        <div className="images-grid relative max-w-[400px]">
+        <div
+          className="images-grid relative max-w-[400px]"
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
           {/* Close button */}
           <button
             className="group absolute right-[-0.5rem] top-[-3rem] bg-transparent p-3"

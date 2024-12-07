@@ -9,6 +9,8 @@ interface NavBarProps {
   setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
   itemCount: number;
   setItemCount: React.Dispatch<React.SetStateAction<number>>;
+  cartOpen: boolean;
+  setCartOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function NavBar({
@@ -16,6 +18,8 @@ export default function NavBar({
   setMenuOpen,
   itemCount,
   setItemCount,
+  cartOpen,
+  setCartOpen,
 }: NavBarProps) {
   const hamburger = (
     <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
@@ -63,8 +67,6 @@ export default function NavBar({
     </svg>
   );
 
-  const [cartOpen, setCartOpen] = useState(false);
-
   return (
     <>
       <header className="relative flex h-[4rem] w-full px-2 md:mx-2 md:h-[6rem] md:border-b-2 md:border-black md:border-opacity-10 md:py-0">
@@ -111,7 +113,10 @@ export default function NavBar({
             <div className="group relative flex items-center">
               <span
                 className="flex items-center"
-                onClick={() => setCartOpen(!cartOpen)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setCartOpen(!cartOpen);
+                }}
               >
                 <button aria-label="Toggle cart">{cart}</button>
                 <span className="absolute right-[-10px] top-[-8px] rounded-full bg-orange px-2 text-xs font-bold text-white">

@@ -6,15 +6,21 @@ import InfoAndBuy from "./components/InfoAndBuy";
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [itemCount, setItemCount] = useState(0);
+  const [cartOpen, setCartOpen] = useState(false);
 
   return (
     <>
-      <div className="wrapper relative m-auto flex min-h-[100vh] max-w-[1000px] flex-col justify-start">
+      <div
+        className="wrapper relative m-auto flex min-h-[100vh] max-w-[1000px] flex-col justify-start"
+        onClick={() => setCartOpen(false)}
+      >
         <NavBar
           menuOpen={menuOpen}
           setMenuOpen={setMenuOpen}
           itemCount={itemCount}
           setItemCount={setItemCount}
+          cartOpen={cartOpen}
+          setCartOpen={setCartOpen}
         />
         <main className="main-content-wrapper grid w-full max-w-[1000px] grid-cols-1 gap-6 md:m-auto md:min-h-[70vh] md:grid-cols-2 md:px-2">
           <ImageGallery />
