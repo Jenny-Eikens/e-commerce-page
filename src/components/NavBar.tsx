@@ -99,7 +99,7 @@ export default function NavBar({
           <nav
             className={`fixed left-0 top-0 z-40 flex h-full w-[65vw] max-w-[300px] flex-col bg-white transition-transform duration-300 ${menuOpen ? "translate-x-0" : "-translate-x-full"} md:relative md:left-auto md:top-auto md:ml-8 md:w-full md:max-w-[500px] md:translate-x-0 md:flex-row`}
           >
-            <ul className="mt-[5rem] list-none pl-4 md:mt-0 md:flex md:flex-row md:items-center md:justify-start md:pl-0">
+            <ul className="mt-[4rem] list-none pl-4 md:mt-0 md:flex md:flex-row md:items-center md:justify-start md:pl-0">
               {navItems.navItems.map((item) => (
                 <li>
                   <a href="#">{item.name}</a>
