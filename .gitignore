@@ -12,6 +12,9 @@
 
 # production
 /build
+.prettierrc
+style-guide.md
+/design/
 
 # misc
 .DS_Store
