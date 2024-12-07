@@ -119,7 +119,7 @@ export default function NavBar({
                 }}
               >
                 <button aria-label="Toggle cart">{cart}</button>
-                <span className="absolute right-[-10px] top-[-8px] rounded-full bg-orange px-2 text-xs font-bold text-white">
+                <span className="absolute right-[-10px] top-[-8px] rounded-full bg-orange px-2 text-xs font-bold text-white hover:cursor-pointer">
                   {itemCount !== 0 && itemCount}
                 </span>
               </span>
