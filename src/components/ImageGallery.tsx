@@ -91,7 +91,7 @@ export default function ImageGallery() {
 
       {/* Main content */}
       <section
-        className="images-grid relative border border-green-500 md:m-auto md:max-w-[400px]"
+        className="images-grid relative md:m-auto md:max-w-[400px]"
         aria-hidden={galleryOpen ? "true" : "false"}
       >
         {/* Previous button */}

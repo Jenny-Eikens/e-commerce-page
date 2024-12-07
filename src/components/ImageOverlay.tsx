@@ -57,11 +57,11 @@ export default function ImageOverlay({
       ref={overlayRef}
     >
       {/* Wrapper for centering everything within overlay */}
-      <div className="grid-wrapper relative m-auto flex h-full w-full items-center justify-center border-4 border-yellow-400">
-        <div className="images-grid relative max-w-[400px] border border-green-500">
+      <div className="grid-wrapper relative m-auto flex h-full w-full items-center justify-center">
+        <div className="images-grid relative max-w-[400px]">
           {/* Close button */}
           <button
-            className="group absolute right-0 top-[-2rem] bg-transparent"
+            className="group absolute right-[-0.5rem] top-[-3rem] bg-transparent p-3"
             onClick={() => setGalleryOpen(false)}
             aria-label="Close overlay"
           >

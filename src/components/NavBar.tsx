@@ -69,19 +69,17 @@ export default function NavBar({
     <>
       <header className="relative flex h-[4rem] w-full px-2 md:h-[6rem] md:border-b-2 md:border-black md:border-opacity-10 md:py-0">
         <div className="header-wrapper flex h-full w-full items-center justify-between">
-          {/* Menu toggling button
-        Why aren't button and logo vertically aligned??? */}
+          {/* Menu toggling button */}
           <span className="flex items-center justify-start">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label={menuOpen ? "Close menu" : "Open menu"}
-              className="relative left-2 top-0 z-50 mr-4 md:hidden"
+              className="relative left-2 top-0 z-50 mr-4 p-1 md:hidden"
             >
               {menuOpen ? close : hamburger}
             </button>
             {/* Logo */}
-            <span className="ml-3 mt-[-3px] md:ml-0 md:items-start">
-              {/* mt is not a good solution */}
+            <span className="ml-1 pb-1 md:ml-2 md:items-start">
               <a href="#" aria-label="Link to homepage">
                 {logo}
               </a>
@@ -132,7 +130,7 @@ export default function NavBar({
               <img
                 src={avatar.link}
                 alt={avatar.description}
-                className="ml-8 max-h-[40px] rounded-full object-contain transition-colors duration-200 hover:outline hover:outline-2 hover:outline-orange md:ml-10 md:mr-4 md:max-h-[50px]"
+                className="ml-4 max-h-[40px] rounded-full object-contain transition-colors duration-200 hover:outline hover:outline-2 hover:outline-orange md:ml-7 md:mr-2 md:max-h-[50px]"
               />
             </a>
           </span>

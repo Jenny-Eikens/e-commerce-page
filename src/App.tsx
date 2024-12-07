@@ -9,18 +9,18 @@ function App() {
 
   return (
     <>
-      <div className="wrapper relative m-auto flex min-h-[100vh] max-w-[1100px] flex-col justify-start border-2 border-red-500">
+      <div className="wrapper relative m-auto flex min-h-[100vh] max-w-[1100px] flex-col justify-start">
         <NavBar
           menuOpen={menuOpen}
           setMenuOpen={setMenuOpen}
           itemCount={itemCount}
           setItemCount={setItemCount}
         />
-        <main className="main-content-wrapper grid w-full max-w-[1000px] grid-cols-1 gap-6 border-2 border-blue-700 md:m-auto md:min-h-[70vh] md:grid-cols-2 md:px-2">
+        <main className="main-content-wrapper grid w-full max-w-[1000px] grid-cols-1 gap-6 md:m-auto md:min-h-[70vh] md:grid-cols-2 md:px-2">
           <ImageGallery />
           <InfoAndBuy itemCount={itemCount} setItemCount={setItemCount} />
         </main>
-        <footer className="attribution relative bottom-0 mt-8 border border-blue-500 pb-1 text-center text-sm md:mt-0">
+        <footer className="attribution relative bottom-0 mt-8 pb-1 text-center text-sm text-v-dark-blue md:mt-0">
           <div>
             Challenge by{" "}
             <a
@@ -30,7 +30,7 @@ function App() {
               Frontend Mentor
             </a>
             . Coded by{" "}
-            <a href="#" target="_blank">
+            <a href="https://github.com/Jenny-Eikens" target="_blank">
               Jennifer Eikens
             </a>
             .

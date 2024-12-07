@@ -74,7 +74,7 @@ export default function InfoAndBuy({
   }
 
   return (
-    <section className="border-2 border-green-500">
+    <section>
       <div className="info-and-buy flex h-full flex-col items-start justify-center space-y-4 px-3 md:mx-4">
         {/* Company name */}
         <h2 className="text-xs font-bold uppercase tracking-wider text-dark-gray-blue">
@@ -102,12 +102,20 @@ export default function InfoAndBuy({
 
         {/* Adding to cart */}
         <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-5">
-          <div className="flex items-center justify-between rounded-lg bg-light-gray-blue p-3 md:col-span-2">
-            <button aria-label="Minus one" onClick={() => handleClickMinus()}>
+          <div className="flex items-center justify-between rounded-lg bg-light-gray-blue md:col-span-2">
+            <button
+              aria-label="Minus one"
+              className="p-4"
+              onClick={() => handleClickMinus()}
+            >
               {iconMinus}
             </button>
             <span className="font-bold">{count}</span>
-            <button aria-label="Plus one" onClick={() => handleClickPlus()}>
+            <button
+              aria-label="Plus one"
+              className="p-4"
+              onClick={() => handleClickPlus()}
+            >
               {iconPlus}
             </button>
           </div>

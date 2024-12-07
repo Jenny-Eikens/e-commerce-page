@@ -39,5 +39,6 @@ nav ul li {
 }
 
 .attribution a {
-  @apply text-orange underline;
+  color: hsl(26, 100%, 35%);
+  @apply underline;
 }
