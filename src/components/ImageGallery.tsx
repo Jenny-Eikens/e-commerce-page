@@ -128,7 +128,7 @@ export default function ImageGallery() {
         </button>
 
         {/* Thumbnails, hidden on mobile screens */}
-        <div className="thumbnail-wrapper thumbnails hidden grid-cols-4 gap-5 md:grid">
+        <div className="thumbnails hidden grid-cols-4 gap-5 md:grid">
           {images.thumbnails.map((thumbnail, index) => {
             return (
               <>

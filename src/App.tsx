@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <div
-        className="wrapper relative m-auto flex min-h-[100vh] max-w-[1000px] flex-col justify-start"
+        className="wrapper relative m-auto flex min-h-[100vh] max-w-[1200px] flex-col justify-start"
         onClick={() => setCartOpen(false)}
       >
         <NavBar
