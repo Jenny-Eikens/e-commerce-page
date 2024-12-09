@@ -1,5 +1,5 @@
-import NavBar from "./components/NavBar";
 import { useState } from "react";
+import Header from "./components/Header";
 import InfoAndBuy from "./components/InfoAndBuy";
 import ImageSetion from "./components/ImageSection";
 
@@ -11,10 +11,10 @@ function App() {
   return (
     <>
       <div
-        className="wrapper relative m-auto flex min-h-[100vh] max-w-[1200px] flex-col justify-start"
+        className="wrapper relative m-auto flex min-h-[100vh] max-w-[1100px] flex-col justify-start"
         onClick={() => setCartOpen(false)}
       >
-        <NavBar
+        <Header
           menuOpen={menuOpen}
           setMenuOpen={setMenuOpen}
           itemCount={itemCount}
@@ -22,7 +22,7 @@ function App() {
           cartOpen={cartOpen}
           setCartOpen={setCartOpen}
         />
-        <main className="main-content-wrapper grid w-full max-w-[1000px] grid-cols-1 gap-6 md:m-auto md:min-h-[70vh] md:grid-cols-2 md:px-2">
+        <main className="grid w-full max-w-[1000px] grid-cols-1 gap-7 md:m-auto md:min-h-[80vh] md:grid-cols-2 md:px-2 lg:px-0">
           <ImageSetion />
           <InfoAndBuy itemCount={itemCount} setItemCount={setItemCount} />
         </main>

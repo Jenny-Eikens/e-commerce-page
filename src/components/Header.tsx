@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import avatar from "../data/avatar.json";
 import navItems from "../data/navigation.json";
 import ShoppingCart from "./ShoppingCart";
@@ -13,7 +12,7 @@ interface NavBarProps {
   setCartOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function NavBar({
+export default function Header({
   menuOpen,
   setMenuOpen,
   itemCount,
@@ -69,7 +68,7 @@ export default function NavBar({
 
   return (
     <>
-      <header className="relative flex h-[4rem] w-full px-2 md:mx-2 md:h-[6rem] md:border-b-2 md:border-black md:border-opacity-10 md:py-0">
+      <header className="relative flex h-[4rem] w-full px-2 md:mx-2 md:h-[6rem] md:border-b-2 md:border-black md:border-opacity-10 md:px-0">
         <div className="header-wrapper flex h-full w-full items-center justify-between">
           {/* Menu toggling button */}
           <span className="flex items-center justify-start">
@@ -81,7 +80,7 @@ export default function NavBar({
               {menuOpen ? close : hamburger}
             </button>
             {/* Logo */}
-            <span className="ml-1 pb-1 md:items-start">
+            <span className="ml-1 pb-1 md:ml-0 md:mr-4 md:items-start">
               <a href="#" aria-label="Link to homepage">
                 {logo}
               </a>

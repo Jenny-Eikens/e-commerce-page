@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
+import { ReactNode } from "react";
 import ImageGallery from "./ImageGallery";
 import Thumbnails from "./Thumbnails";
-import { ReactNode } from "react";
 
 const iconClose = (
   <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">

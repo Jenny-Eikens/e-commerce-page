@@ -74,60 +74,60 @@ export default function InfoAndBuy({
   }
 
   return (
-    <div>
-      <div className="info-and-buy flex h-full flex-col items-start justify-center space-y-6 px-3 md:mx-4">
-        {/* Company name */}
-        <h2 className="text-xs font-bold uppercase tracking-wider text-dark-gray-blue">
-          Sneaker Company
-        </h2>
+    <div className="info-and-buy flex h-full flex-col items-start justify-center space-y-5 px-4 md:mx-4 md:px-0">
+      {/* Company name */}
+      <h2 className="text-xs font-bold uppercase tracking-wider text-dark-gray-blue">
+        Sneaker Company
+      </h2>
 
-        {/* Article */}
-        <h1 className="text-4xl font-bold text-v-dark-blue">{article.title}</h1>
-        <p className="text-sm leading-5 tracking-wide text-dark-gray-blue md:mr-2 md:pt-4 md:leading-6">
-          {article.text}
-        </p>
+      {/* Article */}
+      <h1 className="text-4xl font-bold leading-[2.5rem] text-v-dark-blue md:text-[2.5rem]">
+        {article.title}
+      </h1>
+      <p className="text-sm leading-5 tracking-wide text-dark-gray-blue md:mr-2 md:pt-4 md:leading-6">
+        {article.text}
+      </p>
 
-        {/* Pricing */}
-        <div className="flex w-full flex-nowrap items-end pt-2 md:flex-wrap">
-          <span className="text-2xl font-bold text-v-dark-blue">
-            ${prices.currentPrice.toFixed(2)}
-          </span>
-          <span className="ml-4 flex items-center rounded-md bg-v-dark-blue px-3 py-1 text-sm font-bold text-white">
-            {prices.discount}
-          </span>
-          <span className="ml-auto justify-end font-bold text-dark-gray-blue line-through md:mt-2 md:w-full md:text-left">
-            ${prices.oldPrice.toFixed(2)}
-          </span>
-        </div>
+      {/* Pricing */}
+      <div className="flex w-full flex-nowrap items-end pt-2 md:flex-wrap">
+        <span className="text-2xl font-bold text-v-dark-blue">
+          ${prices.currentPrice.toFixed(2)}
+        </span>
+        <span className="ml-4 flex items-center rounded-md bg-v-dark-blue px-3 py-1 text-sm font-bold text-white">
+          {prices.discount}
+        </span>
+        <span className="ml-auto justify-end font-bold text-dark-gray-blue line-through md:mt-2 md:w-full md:text-left">
+          ${prices.oldPrice.toFixed(2)}
+        </span>
+      </div>
 
-        {/* Adding to cart */}
-        <div className="grid w-full grid-cols-1 gap-4 pt-8 md:pt-0 lg:grid-cols-5">
-          <div className="flex items-center justify-between rounded-lg bg-light-gray-blue lg:col-span-2">
-            <button
-              aria-label="Minus one"
-              className="p-4"
-              onClick={() => handleClickMinus()}
-            >
-              {iconMinus}
-            </button>
-            <span className="font-bold">{count}</span>
-            <button
-              aria-label="Plus one"
-              className="p-4"
-              onClick={() => handleClickPlus()}
-            >
-              {iconPlus}
-            </button>
-          </div>
+      {/* Adding to cart */}
+      <div className="grid w-full grid-cols-1 gap-4 pt-8 md:pt-0 lg:grid-cols-5">
+        <div className="flex items-center justify-between rounded-lg bg-light-gray-blue lg:col-span-2">
           <button
-            aria-label="Add to cart"
-            className="flex items-center justify-center space-x-2 rounded-lg bg-orange p-3 transition-opacity duration-200 hover:bg-opacity-70 lg:col-span-3"
-            onClick={() => setItemCount(itemCount + count)}
+            aria-label="Minus one"
+            className="p-4"
+            onClick={() => handleClickMinus()}
           >
-            <span>{iconCart}</span>
-            <p className="text-sm font-bold text-v-dark-blue">Add to cart</p>
+            {iconMinus}
+          </button>
+          <span className="font-bold">{count}</span>
+          <button
+            aria-label="Plus one"
+            className="p-4"
+            onClick={() => handleClickPlus()}
+          >
+            {iconPlus}
           </button>
         </div>
+        <button
+          aria-label="Add to cart"
+          className="flex items-center justify-center space-x-2 rounded-lg bg-orange p-4 transition-opacity duration-200 hover:bg-opacity-70 lg:col-span-3"
+          onClick={() => setItemCount(itemCount + count)}
+        >
+          <span>{iconCart}</span>
+          <p className="text-sm font-bold text-v-dark-blue">Add to cart</p>
+        </button>
       </div>
     </div>
   );

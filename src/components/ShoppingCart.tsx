@@ -32,7 +32,7 @@ export default function ShoppingCart({
   return (
     <>
       <div
-        className="shopping-cart absolute left-[100%] top-[-1.5rem] z-[20] m-auto mt-[4.5rem] flex h-[35vh] w-[95vw] max-w-[450px] -translate-x-[85%] transform flex-col rounded-lg border-none bg-white shadow-lg shadow-dark-gray-blue md:left-[50%] md:top-full md:mt-6 md:h-[32vh] md:w-[45vw] md:-translate-x-[70%] md:p-5 lg:w-[40vw] xl:left-[50%] xl:w-[25vw] xl:-translate-x-[50%]"
+        className="shopping-cart absolute left-[100%] top-[-1.5rem] z-[20] m-auto mt-[4.5rem] flex h-[35vh] w-[95vw] max-w-[450px] -translate-x-[82.5%] transform flex-col rounded-lg border-none bg-white shadow-lg shadow-dark-gray-blue md:left-[50%] md:top-full md:mt-6 md:h-[30vh] md:w-[45vw] md:-translate-x-[70%] md:p-5 lg:w-[40vw] xl:left-[50%] xl:w-[25vw] xl:-translate-x-[50%]"
         onClick={(e) => {
           e.stopPropagation();
         }}
@@ -50,7 +50,7 @@ export default function ShoppingCart({
           </>
         ) : (
           <>
-            <div className="mt-3 flex h-full flex-col items-center justify-between p-4 md:justify-around md:p-0">
+            <div className="mt-4 flex h-full flex-col items-center justify-between p-4 md:p-0 lg:justify-around">
               <div className="flex items-stretch">
                 <img
                   src={images.thumbnails[0].link}
