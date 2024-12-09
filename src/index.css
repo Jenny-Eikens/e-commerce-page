@@ -15,19 +15,19 @@ body {
 }
 
 nav ul li {
-  @apply my-4 font-[700] text-v-dark-blue md:my-0 md:mr-6 md:flex md:h-full md:items-center md:text-sm md:font-[400] md:text-dark-gray-blue md:transition-all md:duration-200 md:hover:border-b-4 md:hover:border-orange md:hover:text-black md:focus:border-b-4 md:focus:border-orange;
+  @apply my-5 font-[700] text-v-dark-blue md:my-0 md:mr-6 md:flex md:h-full md:items-center md:text-sm md:font-[400] md:text-dark-gray-blue md:transition-all md:duration-200 md:hover:border-b-4 md:hover:border-orange md:hover:text-black md:focus:border-b-4 md:focus:border-orange;
 }
 
 .images-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
   grid-template-areas: "main-image", "thumbnails";
   justify-content: center;
   align-items: center;
 }
 
 .rotation {
-  @apply absolute top-[50%] flex h-9 w-9 translate-y-[-50%] items-center justify-center rounded-full bg-white hover:cursor-pointer md:top-[40%];
+  @apply absolute top-[50%] z-10 flex h-9 w-9 translate-y-[-50%] items-center justify-center rounded-full bg-white hover:cursor-pointer md:top-[40%];
 }
 
 .left {

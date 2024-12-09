@@ -1,6 +1,5 @@
 {
   "name": "product-page",
-  "homepage": "https://Jenny-Eikens.github.io/e-commerce-page",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

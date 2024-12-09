@@ -1,7 +1,7 @@
 import NavBar from "./components/NavBar";
-import ImageGallery from "./components/ImageGallery";
 import { useState } from "react";
 import InfoAndBuy from "./components/InfoAndBuy";
+import ImageSetion from "./components/ImageSection";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,7 +23,7 @@ function App() {
           setCartOpen={setCartOpen}
         />
         <main className="main-content-wrapper grid w-full max-w-[1000px] grid-cols-1 gap-6 md:m-auto md:min-h-[70vh] md:grid-cols-2 md:px-2">
-          <ImageGallery />
+          <ImageSetion />
           <InfoAndBuy itemCount={itemCount} setItemCount={setItemCount} />
         </main>
         <footer className="attribution relative bottom-0 mt-8 pb-1 text-center text-sm text-v-dark-blue md:mt-0">

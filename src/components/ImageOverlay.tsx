@@ -1,5 +1,7 @@
-import images from "../data/images.json";
 import { useEffect, useRef } from "react";
+import ImageGallery from "./ImageGallery";
+import Thumbnails from "./Thumbnails";
+import { ReactNode } from "react";
 
 const iconClose = (
   <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
@@ -13,15 +15,15 @@ const iconClose = (
 );
 
 interface ImageOverlayProps {
-  iconPrevious: any;
-  iconNext: any;
+  iconPrevious: ReactNode;
+  iconNext: ReactNode;
   clickedImg: string;
   currentIndex: number;
+  handleClick: (index: number) => void;
   galleryOpen: boolean;
   setGalleryOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  handleClick: any;
-  handlePrevious: any;
-  handleNext: any;
+  handlePrevious: React.MouseEventHandler<HTMLButtonElement>;
+  handleNext: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export default function ImageOverlay({
@@ -29,9 +31,9 @@ export default function ImageOverlay({
   iconNext,
   clickedImg,
   currentIndex,
+  handleClick,
   galleryOpen,
   setGalleryOpen,
-  handleClick,
   handlePrevious,
   handleNext,
 }: ImageOverlayProps) {
@@ -82,11 +84,14 @@ export default function ImageOverlay({
             {iconPrevious}
           </button>
 
-          {/* Main image */}
-          <img
-            src={clickedImg}
-            className="main-image rounded-xl object-contain hover:cursor-pointer"
-            alt="image of shoe"
+          <ImageGallery
+            galleryOpen={galleryOpen}
+            setGalleryOpen={setGalleryOpen}
+            handlePrevious={handlePrevious}
+            iconPrevious={iconPrevious}
+            clickedImg={clickedImg}
+            handleNext={handleNext}
+            iconNext={iconNext}
           />
           {/* Next button */}
           <button
@@ -98,36 +103,8 @@ export default function ImageOverlay({
           </button>
 
           {/* Thumbnails */}
-          <div className="thumbnail-wrapper thumbnails mx-8 grid grid-cols-4 gap-5">
-            {images.thumbnails.map((thumbnail, index) => {
-              return (
-                <>
-                  <div
-                    key={index}
-                    tabIndex={0}
-                    role="button"
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") {
-                        e.preventDefault();
-                        handleClick(index);
-                      }
-                    }}
-                    className={`group relative rounded-lg transition-all duration-100 hover:cursor-pointer ${currentIndex === index ? "border-2 border-orange" : "border-none"}`}
-                  >
-                    <div
-                      className={`overlay pointer-events-none absolute inset-0 rounded-md bg-light-gray-blue bg-opacity-70 transition-opacity duration-300 group-hover:opacity-80 ${currentIndex === index ? "opacity-100" : "opacity-0"}`}
-                    ></div>
-                    <img
-                      key={index}
-                      src={thumbnail.link}
-                      alt={thumbnail.description}
-                      className="rounded-lg"
-                      onClick={() => handleClick(index)}
-                    />
-                  </div>
-                </>
-              );
-            })}
+          <div className="px-6">
+            <Thumbnails currentIndex={currentIndex} handleClick={handleClick} />
           </div>
         </div>
       </div>

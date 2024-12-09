@@ -1,37 +1,37 @@
 {
   "images": [
     {
-      "link": "images/image-product-1.jpg",
+      "link": "/images/image-product-1.jpg",
       "description": "sneaker image 1"
     },
     {
-      "link": "images/image-product-2.jpg",
+      "link": "/images/image-product-2.jpg",
       "description": "sneaker image 2"
     },
     {
-      "link": "images/image-product-3.jpg",
+      "link": "/images/image-product-3.jpg",
       "description": "sneaker image 3"
     },
     {
-      "link": "images/image-product-4.jpg",
+      "link": "/images/image-product-4.jpg",
       "description": "sneaker image 4"
     }
   ],
   "thumbnails": [
     {
-      "link": "images/image-product-1-thumbnail.jpg",
+      "link": "/images/image-product-1-thumbnail.jpg",
       "description": "thumbnail of sneaker image 1"
     },
     {
-      "link": "images/image-product-2-thumbnail.jpg",
+      "link": "/images/image-product-2-thumbnail.jpg",
       "description": "thumbnail of sneaker image 2"
     },
     {
-      "link": "images/image-product-3-thumbnail.jpg",
+      "link": "/images/image-product-3-thumbnail.jpg",
       "description": "thumbnail of sneaker image 3"
     },
     {
-      "link": "images/image-product-4-thumbnail.jpg",
+      "link": "/images/image-product-4-thumbnail.jpg",
       "description": "thumbnail of sneaker image 4"
     }
   ]
