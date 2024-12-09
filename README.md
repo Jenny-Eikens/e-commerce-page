@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot of laptop design](public/images/Screenshot%20Laptop.jpg)
+![Screenshot of desktop design](public/images/Screenshot%20Laptop.jpg)
 ![Screenshot of mobile design](public/images/Screenshot%20Mobile.jpg)
 
 ### Links
