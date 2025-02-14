@@ -32,11 +32,16 @@ function App() {
             <a
               href="https://www.frontendmentor.io?ref=challenge"
               target="_blank"
+              rel="noreferrer"
             >
               Frontend Mentor
             </a>
             . Coded by{" "}
-            <a href="https://github.com/Jenny-Eikens" target="_blank">
+            <a
+              href="https://github.com/Jenny-Eikens"
+              target="_blank"
+              rel="noreferrer"
+            >
               Jennifer Eikens
             </a>
             .
