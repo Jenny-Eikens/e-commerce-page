@@ -38,7 +38,7 @@ export default function ImageGallery({
         <img
           src={clickedImg}
           className="main-image max-h-[45vh] w-[100vw] object-cover hover:cursor-pointer md:max-h-full md:w-auto md:rounded-xl md:object-contain"
-          alt="image of shoe"
+          alt="shoe"
           onClick={() => setGalleryOpen(true)}
           onKeyDown={(e) => {
             if (e.key === "Enter" || e.key === " ") {
