@@ -65,6 +65,6 @@ Finally, I learned how to make it possible to close an element on the page (in t
 
 ## Author
 
-- Website - [Jennifer Eikens](https://jenny-eikens.github.io/portfolio-page/#projects)
+- Website - [Jennifer Eikens](https://jennifereikens.com)
 - Frontend Mentor - [@Jenny-Eikens](https://www.frontendmentor.io/profile/Jenny-Eikens)
 - GitHub - [Jenny-Eikens](https://github.com/Jenny-Eikens)
